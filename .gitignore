@@ -1,0 +1,17 @@
+# Node modules (if using Node)
+node_modules/
+
+# Python virtual environment
+venv/
+.env
+
+# Secrets
+credentials.json
+token.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
