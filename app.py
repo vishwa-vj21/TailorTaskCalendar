@@ -12,8 +12,8 @@ if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     try:
         res = requests.post("http://localhost:8000/chat", json={"message": user_input})
-        st.write("DEBUG status code:", res.status_code)
-        st.write("DEBUG response text:", res.text)
+        # st.write("DEBUG status code:", res.status_code)
+        # st.write("DEBUG response text:", res.text)
 
         if res.status_code == 200:
             response = res.json().get("response")
