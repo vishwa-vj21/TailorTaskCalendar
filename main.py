@@ -5,6 +5,10 @@ from agent import book_slot_agent
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"message": "TailorTalk backend is running ✅"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
