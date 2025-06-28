@@ -11,7 +11,10 @@ user_input = st.chat_input("Ask me to check or book a calendar slot...")
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     try:
-        res = requests.post("https://tailortalk-backend.onrender.com/chat", json={"message": user_input})
+        res = requests.post(
+    "https://tailortalk-backend.onrender.com/chat",
+    json={"message": user_input}
+)
         # st.write("DEBUG status code:", res.status_code)
         # st.write("DEBUG response text:", res.text)
 
